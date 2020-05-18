@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    
+    <title>Add Task</title>
+</head>
+<body>
+        <div class="bckground">
+        <header class="head">
+                 <ul class="icons">
+                     <li><a href="index.html">&LeftArrow; Back</a></li>
+                     <li><a href="news.html">News</a></li>
+                 </ul>
+                </header>
+    <div class="container page2 ">
+        <h3 class="heading">Add new task</h3>
+        <form id="task-form" onsubmit="return false;">
+            <div class="input-field">
+                <i class="far fa-smile-beam"></i>
+                <input type="text" id="task" placeholder="Task Name">
+                <div class="enter">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <!-- <label for="Task name">Task Name</label> -->
+            </div>
+        </form>
+        <ul class="collection"></ul>
+        <button type="button"><a href="#" class="clear-tasks black">Clear Task</a></button>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
