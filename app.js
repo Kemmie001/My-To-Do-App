@@ -14,6 +14,8 @@ function inputItem(){
 // eventlisteners
 loadEvent();
 function loadEvent(){
+    // DOM load eventlister
+    document.addEventListener('DOMContentLoaded', getTasks);
     // add task event
     form.addEventListener('submit', addTask)
     // add list on click check button
