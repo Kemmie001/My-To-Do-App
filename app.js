@@ -57,7 +57,19 @@ li.appendChild(link);
 // append li to ul
 taskList.appendChild(li);
 
+function toggle(){
+    li.classList.toggle('done');
+}
 
+function removeTask(){
+    taskList.removeChild(li);
+    removeTaskFromLocalStorage(taskList);
+}
+
+
+
+link.addEventListener('click', removeTask);
+li.addEventListener('click', toggle);
     });
 }
 
@@ -95,7 +107,7 @@ storeTask(taskInput.value);
 // clear input
 taskInput.value = "";
  
-k.preventDefault;
+// k.preventDefault;
 
 function toggle(){
     li.classList.toggle('done');
