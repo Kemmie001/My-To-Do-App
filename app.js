@@ -28,10 +28,10 @@ function loadEvent(){
 // get task from local storage
 function getTasks(){
     let tasks;
-    if(localStorage.getItem('tasks' === null)){
+    if(localStorage.getItem('tasks') === null){
         tasks = [];
     }else{
-        tasks = JSON.parse(localStorage.getItem('tasks'))
+        tasks = JSON.parse(localStorage.getItem('tasks'));
     }
     tasks.forEach(function(task){
         //  create li element
@@ -40,7 +40,7 @@ const li = document.createElement('li')
 li.className = 'collection-item';
 
 // create textnode and append child
-li.appendChild(document.createTextNode(taskInput.value));
+li.appendChild(document.createTextNode(task));
 
 // create a new link element
 const link = document.createElement('a');
@@ -57,14 +57,12 @@ li.appendChild(link);
 // append li to ul
 taskList.appendChild(li);
 
-// clear input
-taskInput.value = "";
 
-    })
+    });
 }
 
 // Add Task
-function addTask(){
+function addTask(k){
     if(taskInput.value === ""){
         alert('Please add a task');
     }
@@ -96,6 +94,8 @@ storeTask(taskInput.value);
 
 // clear input
 taskInput.value = "";
+ 
+k.preventDefault;
 
 function toggle(){
     li.classList.toggle('done');
@@ -103,7 +103,7 @@ function toggle(){
 
 function removeTask(){
     taskList.removeChild(li);
-    removeTaskFromLocalStorage();
+    removeTaskFromLocalStorage(taskList);
 }
 
 
@@ -145,7 +145,7 @@ function addList(){
     }
 
     tasks.forEach(function(task, index){
-        if(taskInput.textContent === task){
+        if(taskItem.textContent === task){
             tasks.splice(index, 1)
         }
     });
