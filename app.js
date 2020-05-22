@@ -63,14 +63,14 @@ function toggle(){
 
 function removeTask(){
     taskList.removeChild(li);
-    removeTaskFromLocalStorage(taskList);
 }
 
 
 
 link.addEventListener('click', removeTask);
 li.addEventListener('click', toggle);
-    });
+removeTaskFromLocalStorage(taskList);    
+});
 }
 
 // Add Task
