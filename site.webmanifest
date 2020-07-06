@@ -3,12 +3,12 @@
     "short_name": "My To-dos",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "https://kemmie001.github.io/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-256x256.png",
+            "src": "https://kemmie001.github.io/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         }
